@@ -72,7 +72,7 @@ export const VerseDetail = () => {
   const [loading, setLoading] = useState(false);
 
   const { aayat, error } = useQuran(
-    `http://api.alquran.cloud/v1/surah/${params.suranNumber}/${translation}`
+    `https://api.alquran.cloud/v1/surah/${params.suranNumber}/${translation}`
   );
 
   // Effect to set loading state based on useQuran loading

@@ -27,4 +27,4 @@ const useQuran = (url) => {
 export default useQuran;
 
 
-export const API = "http://api.alquran.cloud/v1/quran/en.asad"
+export const API = "https://api.alquran.cloud/v1/quran/en.asad"
