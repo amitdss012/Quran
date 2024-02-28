@@ -2,7 +2,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { VerseDetail } from "./pages/VerseDetail";
-import { Hadith } from "./pages/Hadith";
+// import { Hadith } from "./pages/Hadith";
 
 
 function App() {
