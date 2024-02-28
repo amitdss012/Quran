@@ -23,6 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-Hadith.jsx
-HadithComp.jsx
-AlllHadith.jsx
