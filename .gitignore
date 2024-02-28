@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+Hadith.jsx
+HadithComp.jsx
+AlllHadith.jsx

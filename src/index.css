@@ -49,6 +49,8 @@ html , body{
 
 .languageButtons{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -65,3 +67,10 @@ html , body{
     cursor: pointer;
 }
 
+.arabic-option{
+    height: 40px;
+    width: 150px;
+    font-style: 10px;
+    border: 2px solid red;
+    padding: 10px;
+}

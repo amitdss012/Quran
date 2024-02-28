@@ -58,9 +58,6 @@
 //   );
 // };
 
-
-
-
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useQuran from "../API/quran";
@@ -70,6 +67,8 @@ export const VerseDetail = () => {
   const params = useParams();
   const [translation, setTranslation] = useState("en.asad");
   const [loading, setLoading] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("");
+
 
   const { aayat, error } = useQuran(
     `https://api.alquran.cloud/v1/surah/${params.suranNumber}/${translation}`
@@ -83,12 +82,12 @@ export const VerseDetail = () => {
   // Effect to update loading state when data fetching is complete
   useEffect(() => {
     setLoading(false); // Set loading state to false when data fetching completes
-  }, [aayat,]); // Watch for changes in aayat and error
+  }, [aayat]); // Watch for changes in aayat and error
 
-
-
+  
   const handleTranslationChange = (translationCode) => {
     setTranslation(translationCode);
+    setSelectedLanguage(translationCode); // Set the selected language
   };
 
   return (
@@ -104,9 +103,32 @@ export const VerseDetail = () => {
         </p>
 
         <div className="languageButtons">
-          <button onClick={() => handleTranslationChange("hi.hindi")}>Hindi</button>
-          <button onClick={() => handleTranslationChange("en.asad")}>English</button>
-          <button onClick={() => handleTranslationChange("ar.muyassar")}>Arabic</button>
+          <button onClick={() => handleTranslationChange("hi.hindi")}>
+            Hindi
+          </button>
+          <button onClick={() => handleTranslationChange("en.asad")}>
+            English
+          </button>
+          <button onClick={() => handleTranslationChange("ur.ahmedali")}>
+            Urdu
+          </button>
+
+          <select
+            className="arabic-option"
+            value={selectedLanguage}
+            onChange={(e) => handleTranslationChange(e.target.value)}
+          >
+            <option value="" disabled>
+              Select an option
+            </option>
+            <option value="ar.muyassar">Arabic 1</option>
+            <option value="quran-simple">Arabic 2</option>
+            <option value="ar.muhammadayyoub">Arabic 3</option>
+            <option value="ar.qurtubi">Arabic 4</option>
+            <option value="ar.jalalayn">Arabic 5</option>
+            <option value="ar.abdulbasitmurattal">Arabic 6</option>
+            <option value="ar.abdullahbasfar">Arabic 7</option>
+          </select>
         </div>
 
         {loading ? (
