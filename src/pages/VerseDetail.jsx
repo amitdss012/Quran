@@ -63,13 +63,9 @@ export const VerseDetail = () => {
             <option value="" disabled>
               Select an option
             </option>
-            <option value="ar.muyassar">Arabic 1</option>
-            <option value="quran-simple">Arabic 2</option>
-            <option value="ar.muhammadayyoub">Arabic 3</option>
-            <option value="ar.qurtubi">Arabic 4</option>
-            <option value="ar.jalalayn">Arabic 5</option>
-            <option value="ar.abdulbasitmurattal">Arabic 6</option>
-            <option value="ar.abdullahbasfar">Arabic 7</option>
+            <option value="quran-simple">Arabic 1</option>
+            <option value="ar.muhammadayyoub">Arabic 2</option>
+            <option value="ar.abdulbasitmurattal">Arabic 3</option>
           </select>
         </div>
 
