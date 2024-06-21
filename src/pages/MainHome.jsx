@@ -10,7 +10,6 @@ export const MainHome = () => {
     <div className='mainHome'>
         <button onClick={() => navigate("/Quran")}>Read Quran</button>
         <button onClick={() => navigate("/hadith")}>Read Hadith</button>
-        <h1 className="fariha-message">Fariha If you are seeing this please activate your Twitter or create a new Twitter please please please, you know I'm feeling suffocated</h1>
     </div>
   )
 }
